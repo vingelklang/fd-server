@@ -14,7 +14,7 @@
     [clojure.java.io :as io]))
 
 (defn test-range []
-  (take 30 (random-sample 0.1 (range (+ 9000 (rand-int 100)) (+ 11000 (rand-int 100))))))
+  (take 30 (random-sample 0.1 (range (+ 1600 (rand-int 100)) (+ 1990 (rand-int 100))))))
 
 (defn test-data []
   {:M01 (test-range)
