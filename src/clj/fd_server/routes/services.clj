@@ -13,6 +13,14 @@
     [ring.util.http-response :refer :all]
     [clojure.java.io :as io]))
 
+(defn test-range []
+  (take 30 (random-sample 0.1 (range (+ 9000 (rand-int 100)) (+ 11000 (rand-int 100))))))
+
+(defn test-data []
+  {:M01 (test-range)
+   :M02 (test-range)
+   :M03 (test-range)})
+
 (defn service-routes []
   ["/api"
    {:coercion spec-coercion/coercion
@@ -50,6 +58,9 @@
 
    ["/ping"
     {:get (constantly (ok {:message "pong"}))}]
+
+   ["/test-data"
+    {:get (constantly (ok (test-data)))}]
    
    ["/graphql" {:no-doc true
                 :post (fn [req] (ok (graphql/execute-request (-> req :body slurp))))}]
