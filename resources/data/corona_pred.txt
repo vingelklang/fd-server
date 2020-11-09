@@ -1,0 +1,32 @@
+The forecast for Germany Cases in the following 30 days is:
+Day 1: 5344
+Day 2: 5364
+Day 3: 5384
+Day 4: 5405
+Day 5: 5425
+Day 6: 5445
+Day 7: 5465
+Day 8: 5486
+Day 9: 5506
+Day 10: 5526
+Day 11: 5546
+Day 12: 5567
+Day 13: 5587
+Day 14: 5607
+Day 15: 5627
+Day 16: 5648
+Day 17: 5668
+Day 18: 5688
+Day 19: 5708
+Day 20: 5729
+Day 21: 5749
+Day 22: 5769
+Day 23: 5789
+Day 24: 5810
+Day 25: 5830
+Day 26: 5850
+Day 27: 5870
+Day 28: 5891
+Day 29: 5911
+Day 30: 5931
+

@@ -1,0 +1,333 @@
+====================================================
+YYG/C19PRO Simulator
+Current time: 2020-11-09 11:59:27.865876
+====================================================
+Loading params file: best_params/latest/global/Germany_ALL.json
+best params type: mean
+================================
+Germany | ALL | 
+================================
+Parameters:
+INITIAL_R_0               : 2.5024844379287323
+LOCKDOWN_R_0              : 0.7457225840216926
+INFLECTION_DAY            : 2020-03-14
+RATE_OF_INFLECTION        : 0.4975510607835406
+LOCKDOWN_FATIGUE          : 1.0
+DAILY_IMPORTS             : 844.8462592145803
+MORTALITY_RATE            : 0.0075
+REOPEN_DATE               : 2020-05-25
+REOPEN_SHIFT_DAYS         : 15.584072664341868
+REOPEN_R                  : 1.2537914262482615
+REOPEN_INFLECTION         : 0.22974123103558564
+POST_REOPEN_EQUILIBRIUM_R : 0.9861253381165667
+FALL_R_MULTIPLIER         : 1.0010329313742765
+--------------------------
+Running simulation...
+--------------------------
+1   - 2020-02-14 - New / total infections: 845 / 845 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+2   - 2020-02-15 - New / total infections: 845 / 1,690 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+3   - 2020-02-16 - New / total infections: 845 / 2,535 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+4   - 2020-02-17 - New / total infections: 845 / 3,379 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+5   - 2020-02-18 - New / total infections: 845 / 4,224 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+6   - 2020-02-19 - New / total infections: 845 / 5,069 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+7   - 2020-02-20 - New / total infections: 845 / 5,914 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+8   - 2020-02-21 - New / total infections: 845 / 6,759 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+9   - 2020-02-22 - New / total infections: 845 / 7,604 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+10  - 2020-02-23 - New / total infections: 2,959 / 10,562 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+11  - 2020-02-24 - New / total infections: 2,949 / 13,512 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+12  - 2020-02-25 - New / total infections: 3,205 / 16,716 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+13  - 2020-02-26 - New / total infections: 3,723 / 20,439 - Hospital beds in use: 0 - New / total deaths: 0.00 / 0.0 - Mean R: 2.502 - IFR: 0.75%
+14  - 2020-02-27 - New / total infections: 4,800 / 25,239 - Hospital beds in use: 16 - New / total deaths: 0.00 / 0.0 - Mean R: 2.501 - IFR: 0.75%
+15  - 2020-02-28 - New / total infections: 6,500 / 31,740 - Hospital beds in use: 33 - New / total deaths: 0.00 / 0.0 - Mean R: 2.501 - IFR: 0.75%
+16  - 2020-02-29 - New / total infections: 7,931 / 39,671 - Hospital beds in use: 50 - New / total deaths: 0.00 / 0.0 - Mean R: 2.500 - IFR: 0.75%
+17  - 2020-03-01 - New / total infections: 9,374 / 49,044 - Hospital beds in use: 67 - New / total deaths: 0.01 / 0.0 - Mean R: 2.499 - IFR: 0.75%
+18  - 2020-03-02 - New / total infections: 11,276 / 60,320 - Hospital beds in use: 84 - New / total deaths: 0.04 / 0.0 - Mean R: 2.497 - IFR: 0.75%
+19  - 2020-03-03 - New / total infections: 13,765 / 74,085 - Hospital beds in use: 101 - New / total deaths: 0.07 / 0.1 - Mean R: 2.494 - IFR: 0.75%
+20  - 2020-03-04 - New / total infections: 17,004 / 91,090 - Hospital beds in use: 118 - New / total deaths: 0.12 / 0.2 - Mean R: 2.489 - IFR: 0.75%
+21  - 2020-03-05 - New / total infections: 20,679 / 111,768 - Hospital beds in use: 135 - New / total deaths: 0.18 / 0.4 - Mean R: 2.481 - IFR: 0.75%
+22  - 2020-03-06 - New / total infections: 24,846 / 136,614 - Hospital beds in use: 152 - New / total deaths: 0.25 / 0.7 - Mean R: 2.468 - IFR: 0.75%
+23  - 2020-03-07 - New / total infections: 29,756 / 166,370 - Hospital beds in use: 211 - New / total deaths: 0.34 / 1.0 - Mean R: 2.447 - IFR: 0.75%
+24  - 2020-03-08 - New / total infections: 35,556 / 201,926 - Hospital beds in use: 270 - New / total deaths: 0.45 / 1.5 - Mean R: 2.415 - IFR: 0.75%
+25  - 2020-03-09 - New / total infections: 42,207 / 244,134 - Hospital beds in use: 317 - New / total deaths: 0.57 / 2.0 - Mean R: 2.364 - IFR: 0.75%
+26  - 2020-03-10 - New / total infections: 49,323 / 293,457 - Hospital beds in use: 374 - New / total deaths: 0.79 / 2.8 - Mean R: 2.286 - IFR: 0.75%
+27  - 2020-03-11 - New / total infections: 56,345 / 349,802 - Hospital beds in use: 454 - New / total deaths: 1.12 / 3.9 - Mean R: 2.175 - IFR: 0.75%
+28  - 2020-03-12 - New / total infections: 62,579 / 412,381 - Hospital beds in use: 567 - New / total deaths: 1.57 / 5.5 - Mean R: 2.022 - IFR: 0.75%
+29  - 2020-03-13 - New / total infections: 67,203 / 479,585 - Hospital beds in use: 708 - New / total deaths: 2.11 / 7.6 - Mean R: 1.832 - IFR: 0.75%
+30  - 2020-03-14 - New / total infections: 69,580 / 549,165 - Hospital beds in use: 879 - New / total deaths: 2.71 / 10.3 - Mean R: 1.617 - IFR: 0.75%
+31  - 2020-03-15 - New / total infections: 69,631 / 618,795 - Hospital beds in use: 1,088 - New / total deaths: 3.32 / 13.7 - Mean R: 1.403 - IFR: 0.75%
+32  - 2020-03-16 - New / total infections: 67,935 / 686,730 - Hospital beds in use: 1,346 - New / total deaths: 4.11 / 17.8 - Mean R: 1.213 - IFR: 0.75%
+33  - 2020-03-17 - New / total infections: 65,331 / 752,061 - Hospital beds in use: 1,669 - New / total deaths: 5.14 / 22.9 - Mean R: 1.061 - IFR: 0.74%
+34  - 2020-03-18 - New / total infections: 62,429 / 814,490 - Hospital beds in use: 2,024 - New / total deaths: 6.47 / 29.4 - Mean R: 0.950 - IFR: 0.74%
+35  - 2020-03-19 - New / total infections: 59,473 / 873,963 - Hospital beds in use: 2,462 - New / total deaths: 8.17 / 37.6 - Mean R: 0.874 - IFR: 0.74%
+36  - 2020-03-20 - New / total infections: 56,493 / 930,456 - Hospital beds in use: 2,993 - New / total deaths: 10.28 / 47.8 - Mean R: 0.823 - IFR: 0.73%
+37  - 2020-03-21 - New / total infections: 53,505 / 983,961 - Hospital beds in use: 3,629 - New / total deaths: 12.93 / 60.8 - Mean R: 0.791 - IFR: 0.73%
+38  - 2020-03-22 - New / total infections: 50,572 / 1,034,534 - Hospital beds in use: 4,377 - New / total deaths: 16.24 / 77.0 - Mean R: 0.770 - IFR: 0.72%
+39  - 2020-03-23 - New / total infections: 47,766 / 1,082,299 - Hospital beds in use: 5,234 - New / total deaths: 20.39 / 97.4 - Mean R: 0.758 - IFR: 0.72%
+40  - 2020-03-24 - New / total infections: 45,119 / 1,127,418 - Hospital beds in use: 6,202 - New / total deaths: 25.54 / 122.9 - Mean R: 0.750 - IFR: 0.72%
+41  - 2020-03-25 - New / total infections: 42,624 / 1,170,043 - Hospital beds in use: 7,266 - New / total deaths: 31.79 / 154.7 - Mean R: 0.745 - IFR: 0.71%
+42  - 2020-03-26 - New / total infections: 40,260 / 1,210,303 - Hospital beds in use: 8,385 - New / total deaths: 39.36 / 194.1 - Mean R: 0.741 - IFR: 0.71%
+43  - 2020-03-27 - New / total infections: 38,016 / 1,248,319 - Hospital beds in use: 9,501 - New / total deaths: 48.50 / 242.6 - Mean R: 0.739 - IFR: 0.71%
+44  - 2020-03-28 - New / total infections: 35,891 / 1,284,210 - Hospital beds in use: 10,554 - New / total deaths: 59.37 / 302.0 - Mean R: 0.738 - IFR: 0.70%
+45  - 2020-03-29 - New / total infections: 33,887 / 1,318,096 - Hospital beds in use: 11,499 - New / total deaths: 72.05 / 374.0 - Mean R: 0.737 - IFR: 0.70%
+46  - 2020-03-30 - New / total infections: 32,000 / 1,350,096 - Hospital beds in use: 12,308 - New / total deaths: 86.45 / 460.5 - Mean R: 0.736 - IFR: 0.70%
+47  - 2020-03-31 - New / total infections: 30,222 / 1,380,318 - Hospital beds in use: 12,962 - New / total deaths: 102.37 / 562.8 - Mean R: 0.736 - IFR: 0.69%
+48  - 2020-04-01 - New / total infections: 28,544 / 1,408,862 - Hospital beds in use: 13,440 - New / total deaths: 119.46 / 682.3 - Mean R: 0.735 - IFR: 0.69%
+49  - 2020-04-02 - New / total infections: 26,959 / 1,435,821 - Hospital beds in use: 13,726 - New / total deaths: 137.27 / 819.6 - Mean R: 0.735 - IFR: 0.69%
+50  - 2020-04-03 - New / total infections: 25,464 / 1,461,285 - Hospital beds in use: 13,810 - New / total deaths: 155.29 / 974.9 - Mean R: 0.735 - IFR: 0.68%
+51  - 2020-04-04 - New / total infections: 24,055 / 1,485,340 - Hospital beds in use: 13,694 - New / total deaths: 173.03 / 1,147.9 - Mean R: 0.735 - IFR: 0.68%
+52  - 2020-04-05 - New / total infections: 22,727 / 1,508,068 - Hospital beds in use: 13,398 - New / total deaths: 190.07 / 1,338.0 - Mean R: 0.734 - IFR: 0.68%
+53  - 2020-04-06 - New / total infections: 21,475 / 1,529,542 - Hospital beds in use: 12,956 - New / total deaths: 206.06 / 1,544.0 - Mean R: 0.734 - IFR: 0.67%
+54  - 2020-04-07 - New / total infections: 20,294 / 1,549,836 - Hospital beds in use: 12,417 - New / total deaths: 220.70 / 1,764.7 - Mean R: 0.734 - IFR: 0.67%
+55  - 2020-04-08 - New / total infections: 19,180 / 1,569,016 - Hospital beds in use: 11,830 - New / total deaths: 233.76 / 1,998.5 - Mean R: 0.734 - IFR: 0.66%
+56  - 2020-04-09 - New / total infections: 18,129 / 1,587,145 - Hospital beds in use: 11,231 - New / total deaths: 245.03 / 2,243.5 - Mean R: 0.734 - IFR: 0.66%
+57  - 2020-04-10 - New / total infections: 17,138 / 1,604,283 - Hospital beds in use: 10,642 - New / total deaths: 254.36 / 2,497.9 - Mean R: 0.734 - IFR: 0.66%
+58  - 2020-04-11 - New / total infections: 16,203 / 1,620,486 - Hospital beds in use: 10,072 - New / total deaths: 261.70 / 2,759.6 - Mean R: 0.733 - IFR: 0.66%
+59  - 2020-04-12 - New / total infections: 15,322 / 1,635,808 - Hospital beds in use: 9,522 - New / total deaths: 267.03 / 3,026.6 - Mean R: 0.733 - IFR: 0.65%
+60  - 2020-04-13 - New / total infections: 14,490 / 1,650,298 - Hospital beds in use: 8,997 - New / total deaths: 270.41 / 3,297.0 - Mean R: 0.733 - IFR: 0.65%
+61  - 2020-04-14 - New / total infections: 13,706 / 1,664,004 - Hospital beds in use: 8,498 - New / total deaths: 272.00 / 3,569.0 - Mean R: 0.733 - IFR: 0.65%
+62  - 2020-04-15 - New / total infections: 12,966 / 1,676,970 - Hospital beds in use: 8,025 - New / total deaths: 272.04 / 3,841.0 - Mean R: 0.733 - IFR: 0.64%
+63  - 2020-04-16 - New / total infections: 12,267 / 1,689,237 - Hospital beds in use: 7,579 - New / total deaths: 270.02 / 4,111.1 - Mean R: 0.733 - IFR: 0.64%
+64  - 2020-04-17 - New / total infections: 11,608 / 1,700,845 - Hospital beds in use: 7,158 - New / total deaths: 266.47 / 4,377.5 - Mean R: 0.733 - IFR: 0.64%
+65  - 2020-04-18 - New / total infections: 10,986 / 1,711,831 - Hospital beds in use: 6,760 - New / total deaths: 261.77 / 4,639.3 - Mean R: 0.733 - IFR: 0.63%
+66  - 2020-04-19 - New / total infections: 10,399 / 1,722,230 - Hospital beds in use: 6,384 - New / total deaths: 256.25 / 4,895.5 - Mean R: 0.732 - IFR: 0.63%
+67  - 2020-04-20 - New / total infections: 9,844 / 1,732,074 - Hospital beds in use: 6,030 - New / total deaths: 250.14 / 5,145.7 - Mean R: 0.732 - IFR: 0.63%
+68  - 2020-04-21 - New / total infections: 9,320 / 1,741,394 - Hospital beds in use: 5,696 - New / total deaths: 243.64 / 5,389.3 - Mean R: 0.732 - IFR: 0.62%
+69  - 2020-04-22 - New / total infections: 8,826 / 1,750,220 - Hospital beds in use: 5,380 - New / total deaths: 236.87 / 5,626.2 - Mean R: 0.732 - IFR: 0.62%
+70  - 2020-04-23 - New / total infections: 8,358 / 1,758,578 - Hospital beds in use: 5,083 - New / total deaths: 229.93 / 5,856.1 - Mean R: 0.732 - IFR: 0.62%
+71  - 2020-04-24 - New / total infections: 7,917 / 1,766,495 - Hospital beds in use: 4,803 - New / total deaths: 222.88 / 6,079.0 - Mean R: 0.732 - IFR: 0.61%
+72  - 2020-04-25 - New / total infections: 7,499 / 1,773,994 - Hospital beds in use: 4,538 - New / total deaths: 215.76 / 6,294.8 - Mean R: 0.732 - IFR: 0.61%
+73  - 2020-04-26 - New / total infections: 7,105 / 1,781,099 - Hospital beds in use: 4,289 - New / total deaths: 208.57 / 6,503.3 - Mean R: 0.732 - IFR: 0.61%
+74  - 2020-04-27 - New / total infections: 6,731 / 1,787,830 - Hospital beds in use: 4,054 - New / total deaths: 201.32 / 6,704.7 - Mean R: 0.732 - IFR: 0.60%
+75  - 2020-04-28 - New / total infections: 6,378 / 1,794,208 - Hospital beds in use: 3,832 - New / total deaths: 194.01 / 6,898.7 - Mean R: 0.732 - IFR: 0.60%
+76  - 2020-04-29 - New / total infections: 6,044 / 1,800,253 - Hospital beds in use: 3,623 - New / total deaths: 186.65 / 7,085.3 - Mean R: 0.732 - IFR: 0.60%
+77  - 2020-04-30 - New / total infections: 5,728 / 1,805,981 - Hospital beds in use: 3,426 - New / total deaths: 179.24 / 7,264.6 - Mean R: 0.732 - IFR: 0.60%
+78  - 2020-05-01 - New / total infections: 5,429 / 1,811,409 - Hospital beds in use: 3,239 - New / total deaths: 171.81 / 7,436.4 - Mean R: 0.732 - IFR: 0.59%
+79  - 2020-05-02 - New / total infections: 5,145 / 1,816,554 - Hospital beds in use: 3,064 - New / total deaths: 164.39 / 7,600.8 - Mean R: 0.732 - IFR: 0.59%
+80  - 2020-05-03 - New / total infections: 4,876 / 1,821,430 - Hospital beds in use: 2,898 - New / total deaths: 156.99 / 7,757.7 - Mean R: 0.732 - IFR: 0.59%
+81  - 2020-05-04 - New / total infections: 4,621 / 1,826,052 - Hospital beds in use: 2,742 - New / total deaths: 149.66 / 7,907.4 - Mean R: 0.732 - IFR: 0.58%
+82  - 2020-05-05 - New / total infections: 4,380 / 1,830,432 - Hospital beds in use: 2,594 - New / total deaths: 142.41 / 8,049.8 - Mean R: 0.732 - IFR: 0.58%
+83  - 2020-05-06 - New / total infections: 4,150 / 1,834,582 - Hospital beds in use: 2,455 - New / total deaths: 135.30 / 8,185.1 - Mean R: 0.732 - IFR: 0.58%
+84  - 2020-05-07 - New / total infections: 3,933 / 1,838,515 - Hospital beds in use: 2,323 - New / total deaths: 128.33 / 8,313.4 - Mean R: 0.731 - IFR: 0.58%
+85  - 2020-05-08 - New / total infections: 3,726 / 1,842,241 - Hospital beds in use: 2,199 - New / total deaths: 121.53 / 8,435.0 - Mean R: 0.731 - IFR: 0.57%
+86  - 2020-05-09 - New / total infections: 3,530 / 1,845,770 - Hospital beds in use: 2,082 - New / total deaths: 114.94 / 8,549.9 - Mean R: 0.731 - IFR: 0.57%
+87  - 2020-05-10 - New / total infections: 3,343 / 1,849,113 - Hospital beds in use: 1,971 - New / total deaths: 108.58 / 8,658.5 - Mean R: 0.731 - IFR: 0.57%
+88  - 2020-05-11 - New / total infections: 3,165 / 1,852,278 - Hospital beds in use: 1,867 - New / total deaths: 102.46 / 8,760.9 - Mean R: 0.731 - IFR: 0.56%
+89  - 2020-05-12 - New / total infections: 2,996 / 1,855,275 - Hospital beds in use: 1,768 - New / total deaths: 96.59 / 8,857.5 - Mean R: 0.731 - IFR: 0.56%
+90  - 2020-05-13 - New / total infections: 2,835 / 1,858,110 - Hospital beds in use: 1,675 - New / total deaths: 91.00 / 8,948.5 - Mean R: 0.731 - IFR: 0.56%
+91  - 2020-05-14 - New / total infections: 2,682 / 1,860,791 - Hospital beds in use: 1,586 - New / total deaths: 85.68 / 9,034.2 - Mean R: 0.731 - IFR: 0.56%
+92  - 2020-05-15 - New / total infections: 2,535 / 1,863,327 - Hospital beds in use: 1,503 - New / total deaths: 80.63 / 9,114.8 - Mean R: 0.731 - IFR: 0.55%
+93  - 2020-05-16 - New / total infections: 2,396 / 1,865,722 - Hospital beds in use: 1,424 - New / total deaths: 75.88 / 9,190.7 - Mean R: 0.731 - IFR: 0.55%
+94  - 2020-05-17 - New / total infections: 2,262 / 1,867,984 - Hospital beds in use: 1,349 - New / total deaths: 71.41 / 9,262.1 - Mean R: 0.731 - IFR: 0.55%
+95  - 2020-05-18 - New / total infections: 2,135 / 1,870,119 - Hospital beds in use: 1,278 - New / total deaths: 67.21 / 9,329.3 - Mean R: 0.731 - IFR: 0.54%
+96  - 2020-05-19 - New / total infections: 2,013 / 1,872,132 - Hospital beds in use: 1,211 - New / total deaths: 63.26 / 9,392.6 - Mean R: 0.731 - IFR: 0.54%
+97  - 2020-05-20 - New / total infections: 1,896 / 1,874,029 - Hospital beds in use: 1,148 - New / total deaths: 59.55 / 9,452.1 - Mean R: 0.731 - IFR: 0.54%
+98  - 2020-05-21 - New / total infections: 1,785 / 1,875,813 - Hospital beds in use: 1,088 - New / total deaths: 56.06 / 9,508.2 - Mean R: 0.731 - IFR: 0.54%
+99  - 2020-05-22 - New / total infections: 1,678 / 1,877,491 - Hospital beds in use: 1,031 - New / total deaths: 52.78 / 9,561.0 - Mean R: 0.731 - IFR: 0.53%
+100 - 2020-05-23 - New / total infections: 1,576 / 1,879,067 - Hospital beds in use: 977 - New / total deaths: 49.70 / 9,610.7 - Mean R: 0.731 - IFR: 0.53%
+101 - 2020-05-24 - New / total infections: 1,487 / 1,880,554 - Hospital beds in use: 925 - New / total deaths: 46.81 / 9,657.5 - Mean R: 0.732 - IFR: 0.53%
+102 - 2020-05-25 - New / total infections: 1,401 / 1,881,955 - Hospital beds in use: 877 - New / total deaths: 44.08 / 9,701.6 - Mean R: 0.732 - IFR: 0.53%
+103 - 2020-05-26 - New / total infections: 1,320 / 1,883,275 - Hospital beds in use: 831 - New / total deaths: 41.52 / 9,743.1 - Mean R: 0.732 - IFR: 0.52%
+104 - 2020-05-27 - New / total infections: 1,243 / 1,884,518 - Hospital beds in use: 787 - New / total deaths: 39.11 / 9,782.2 - Mean R: 0.732 - IFR: 0.52%
+105 - 2020-05-28 - New / total infections: 1,170 / 1,885,688 - Hospital beds in use: 745 - New / total deaths: 36.84 / 9,819.0 - Mean R: 0.732 - IFR: 0.52%
+106 - 2020-05-29 - New / total infections: 1,103 / 1,886,791 - Hospital beds in use: 705 - New / total deaths: 34.71 / 9,853.8 - Mean R: 0.732 - IFR: 0.51%
+107 - 2020-05-30 - New / total infections: 1,040 / 1,887,831 - Hospital beds in use: 668 - New / total deaths: 32.70 / 9,886.5 - Mean R: 0.733 - IFR: 0.51%
+108 - 2020-05-31 - New / total infections: 981 / 1,888,812 - Hospital beds in use: 632 - New / total deaths: 30.81 / 9,917.3 - Mean R: 0.733 - IFR: 0.51%
+109 - 2020-06-01 - New / total infections: 925 / 1,889,737 - Hospital beds in use: 597 - New / total deaths: 29.03 / 9,946.3 - Mean R: 0.734 - IFR: 0.51%
+110 - 2020-06-02 - New / total infections: 873 / 1,890,610 - Hospital beds in use: 565 - New / total deaths: 27.35 / 9,973.7 - Mean R: 0.734 - IFR: 0.50%
+111 - 2020-06-03 - New / total infections: 824 / 1,891,434 - Hospital beds in use: 534 - New / total deaths: 25.77 / 9,999.4 - Mean R: 0.735 - IFR: 0.50%
+112 - 2020-06-04 - New / total infections: 778 / 1,892,213 - Hospital beds in use: 504 - New / total deaths: 24.28 / 10,023.7 - Mean R: 0.736 - IFR: 0.50%
+113 - 2020-06-05 - New / total infections: 736 / 1,892,949 - Hospital beds in use: 475 - New / total deaths: 22.87 / 10,046.6 - Mean R: 0.737 - IFR: 0.50%
+114 - 2020-06-06 - New / total infections: 696 / 1,893,645 - Hospital beds in use: 448 - New / total deaths: 21.55 / 10,068.1 - Mean R: 0.739 - IFR: 0.49%
+115 - 2020-06-07 - New / total infections: 659 / 1,894,304 - Hospital beds in use: 423 - New / total deaths: 20.30 / 10,088.4 - Mean R: 0.741 - IFR: 0.49%
+116 - 2020-06-08 - New / total infections: 625 / 1,894,929 - Hospital beds in use: 398 - New / total deaths: 19.11 / 10,107.5 - Mean R: 0.743 - IFR: 0.49%
+117 - 2020-06-09 - New / total infections: 593 / 1,895,523 - Hospital beds in use: 375 - New / total deaths: 18.00 / 10,125.5 - Mean R: 0.746 - IFR: 0.49%
+118 - 2020-06-10 - New / total infections: 564 / 1,896,087 - Hospital beds in use: 354 - New / total deaths: 16.94 / 10,142.5 - Mean R: 0.750 - IFR: 0.48%
+119 - 2020-06-11 - New / total infections: 538 / 1,896,625 - Hospital beds in use: 333 - New / total deaths: 15.95 / 10,158.4 - Mean R: 0.755 - IFR: 0.48%
+120 - 2020-06-12 - New / total infections: 514 / 1,897,139 - Hospital beds in use: 313 - New / total deaths: 15.01 / 10,173.4 - Mean R: 0.761 - IFR: 0.48%
+121 - 2020-06-13 - New / total infections: 492 / 1,897,631 - Hospital beds in use: 295 - New / total deaths: 14.12 / 10,187.6 - Mean R: 0.768 - IFR: 0.48%
+122 - 2020-06-14 - New / total infections: 473 / 1,898,104 - Hospital beds in use: 278 - New / total deaths: 13.28 / 10,200.8 - Mean R: 0.776 - IFR: 0.48%
+123 - 2020-06-15 - New / total infections: 456 / 1,898,560 - Hospital beds in use: 262 - New / total deaths: 12.49 / 10,213.3 - Mean R: 0.787 - IFR: 0.47%
+124 - 2020-06-16 - New / total infections: 442 / 1,899,002 - Hospital beds in use: 247 - New / total deaths: 11.75 / 10,225.1 - Mean R: 0.799 - IFR: 0.47%
+125 - 2020-06-17 - New / total infections: 430 / 1,899,432 - Hospital beds in use: 233 - New / total deaths: 11.04 / 10,236.1 - Mean R: 0.814 - IFR: 0.47%
+126 - 2020-06-18 - New / total infections: 421 / 1,899,853 - Hospital beds in use: 219 - New / total deaths: 10.38 / 10,246.5 - Mean R: 0.831 - IFR: 0.47%
+127 - 2020-06-19 - New / total infections: 415 / 1,900,268 - Hospital beds in use: 207 - New / total deaths: 9.76 / 10,256.3 - Mean R: 0.851 - IFR: 0.46%
+128 - 2020-06-20 - New / total infections: 411 / 1,900,678 - Hospital beds in use: 195 - New / total deaths: 9.17 / 10,265.4 - Mean R: 0.873 - IFR: 0.46%
+129 - 2020-06-21 - New / total infections: 409 / 1,901,087 - Hospital beds in use: 184 - New / total deaths: 8.61 / 10,274.0 - Mean R: 0.897 - IFR: 0.46%
+130 - 2020-06-22 - New / total infections: 410 / 1,901,497 - Hospital beds in use: 174 - New / total deaths: 8.09 / 10,282.1 - Mean R: 0.924 - IFR: 0.46%
+131 - 2020-06-23 - New / total infections: 413 / 1,901,910 - Hospital beds in use: 165 - New / total deaths: 7.60 / 10,289.7 - Mean R: 0.951 - IFR: 0.45%
+132 - 2020-06-24 - New / total infections: 419 / 1,902,329 - Hospital beds in use: 156 - New / total deaths: 7.14 / 10,296.9 - Mean R: 0.980 - IFR: 0.45%
+133 - 2020-06-25 - New / total infections: 427 / 1,902,756 - Hospital beds in use: 148 - New / total deaths: 6.71 / 10,303.6 - Mean R: 1.008 - IFR: 0.45%
+134 - 2020-06-26 - New / total infections: 436 / 1,903,192 - Hospital beds in use: 140 - New / total deaths: 6.30 / 10,309.9 - Mean R: 1.036 - IFR: 0.45%
+135 - 2020-06-27 - New / total infections: 448 / 1,903,640 - Hospital beds in use: 133 - New / total deaths: 5.92 / 10,315.8 - Mean R: 1.062 - IFR: 0.45%
+136 - 2020-06-28 - New / total infections: 462 / 1,904,102 - Hospital beds in use: 126 - New / total deaths: 5.57 / 10,321.4 - Mean R: 1.087 - IFR: 0.44%
+137 - 2020-06-29 - New / total infections: 477 / 1,904,579 - Hospital beds in use: 121 - New / total deaths: 5.23 / 10,326.6 - Mean R: 1.109 - IFR: 0.44%
+138 - 2020-06-30 - New / total infections: 494 / 1,905,073 - Hospital beds in use: 115 - New / total deaths: 4.92 / 10,331.5 - Mean R: 1.129 - IFR: 0.44%
+139 - 2020-07-01 - New / total infections: 512 / 1,905,585 - Hospital beds in use: 110 - New / total deaths: 4.62 / 10,336.2 - Mean R: 1.146 - IFR: 0.44%
+140 - 2020-07-02 - New / total infections: 532 / 1,906,118 - Hospital beds in use: 106 - New / total deaths: 4.35 / 10,340.5 - Mean R: 1.161 - IFR: 0.43%
+141 - 2020-07-03 - New / total infections: 554 / 1,906,672 - Hospital beds in use: 103 - New / total deaths: 4.09 / 10,344.6 - Mean R: 1.173 - IFR: 0.43%
+142 - 2020-07-04 - New / total infections: 577 / 1,907,248 - Hospital beds in use: 99 - New / total deaths: 3.86 / 10,348.5 - Mean R: 1.183 - IFR: 0.43%
+143 - 2020-07-05 - New / total infections: 601 / 1,907,849 - Hospital beds in use: 97 - New / total deaths: 3.63 / 10,352.1 - Mean R: 1.192 - IFR: 0.43%
+144 - 2020-07-06 - New / total infections: 626 / 1,908,475 - Hospital beds in use: 95 - New / total deaths: 3.43 / 10,355.5 - Mean R: 1.199 - IFR: 0.42%
+145 - 2020-07-07 - New / total infections: 653 / 1,909,128 - Hospital beds in use: 93 - New / total deaths: 3.23 / 10,358.7 - Mean R: 1.205 - IFR: 0.41%
+146 - 2020-07-08 - New / total infections: 682 / 1,909,810 - Hospital beds in use: 93 - New / total deaths: 3.05 / 10,361.8 - Mean R: 1.210 - IFR: 0.40%
+147 - 2020-07-09 - New / total infections: 711 / 1,910,521 - Hospital beds in use: 92 - New / total deaths: 2.87 / 10,364.7 - Mean R: 1.213 - IFR: 0.39%
+148 - 2020-07-10 - New / total infections: 743 / 1,911,264 - Hospital beds in use: 92 - New / total deaths: 2.71 / 10,367.4 - Mean R: 1.217 - IFR: 0.38%
+149 - 2020-07-11 - New / total infections: 775 / 1,912,039 - Hospital beds in use: 93 - New / total deaths: 2.56 / 10,369.9 - Mean R: 1.219 - IFR: 0.37%
+150 - 2020-07-12 - New / total infections: 809 / 1,912,848 - Hospital beds in use: 94 - New / total deaths: 2.42 / 10,372.4 - Mean R: 1.221 - IFR: 0.36%
+151 - 2020-07-13 - New / total infections: 845 / 1,913,694 - Hospital beds in use: 96 - New / total deaths: 2.30 / 10,374.7 - Mean R: 1.223 - IFR: 0.35%
+152 - 2020-07-14 - New / total infections: 882 / 1,914,576 - Hospital beds in use: 98 - New / total deaths: 2.18 / 10,376.8 - Mean R: 1.224 - IFR: 0.34%
+153 - 2020-07-15 - New / total infections: 921 / 1,915,497 - Hospital beds in use: 100 - New / total deaths: 2.08 / 10,378.9 - Mean R: 1.225 - IFR: 0.33%
+154 - 2020-07-16 - New / total infections: 962 / 1,916,459 - Hospital beds in use: 103 - New / total deaths: 1.99 / 10,380.9 - Mean R: 1.226 - IFR: 0.32%
+155 - 2020-07-17 - New / total infections: 1,004 / 1,917,464 - Hospital beds in use: 106 - New / total deaths: 1.90 / 10,382.8 - Mean R: 1.226 - IFR: 0.32%
+156 - 2020-07-18 - New / total infections: 1,049 / 1,918,513 - Hospital beds in use: 110 - New / total deaths: 1.83 / 10,384.6 - Mean R: 1.227 - IFR: 0.31%
+157 - 2020-07-19 - New / total infections: 1,095 / 1,919,608 - Hospital beds in use: 114 - New / total deaths: 1.77 / 10,386.4 - Mean R: 1.227 - IFR: 0.30%
+158 - 2020-07-20 - New / total infections: 1,143 / 1,920,751 - Hospital beds in use: 118 - New / total deaths: 1.71 / 10,388.1 - Mean R: 1.227 - IFR: 0.29%
+159 - 2020-07-21 - New / total infections: 1,194 / 1,921,944 - Hospital beds in use: 123 - New / total deaths: 1.66 / 10,389.8 - Mean R: 1.228 - IFR: 0.29%
+160 - 2020-07-22 - New / total infections: 1,245 / 1,923,190 - Hospital beds in use: 128 - New / total deaths: 1.62 / 10,391.4 - Mean R: 1.228 - IFR: 0.28%
+161 - 2020-07-23 - New / total infections: 1,300 / 1,924,489 - Hospital beds in use: 133 - New / total deaths: 1.59 / 10,393.0 - Mean R: 1.227 - IFR: 0.27%
+162 - 2020-07-24 - New / total infections: 1,356 / 1,925,845 - Hospital beds in use: 139 - New / total deaths: 1.56 / 10,394.5 - Mean R: 1.227 - IFR: 0.26%
+163 - 2020-07-25 - New / total infections: 1,415 / 1,927,260 - Hospital beds in use: 145 - New / total deaths: 1.54 / 10,396.1 - Mean R: 1.227 - IFR: 0.26%
+164 - 2020-07-26 - New / total infections: 1,476 / 1,928,736 - Hospital beds in use: 151 - New / total deaths: 1.52 / 10,397.6 - Mean R: 1.226 - IFR: 0.25%
+165 - 2020-07-27 - New / total infections: 1,539 / 1,930,274 - Hospital beds in use: 158 - New / total deaths: 1.50 / 10,399.1 - Mean R: 1.225 - IFR: 0.25%
+166 - 2020-07-28 - New / total infections: 1,604 / 1,931,879 - Hospital beds in use: 164 - New / total deaths: 1.49 / 10,400.6 - Mean R: 1.224 - IFR: 0.24%
+167 - 2020-07-29 - New / total infections: 1,672 / 1,933,550 - Hospital beds in use: 172 - New / total deaths: 1.49 / 10,402.1 - Mean R: 1.223 - IFR: 0.23%
+168 - 2020-07-30 - New / total infections: 1,742 / 1,935,292 - Hospital beds in use: 179 - New / total deaths: 1.49 / 10,403.6 - Mean R: 1.222 - IFR: 0.23%
+169 - 2020-07-31 - New / total infections: 1,814 / 1,937,106 - Hospital beds in use: 187 - New / total deaths: 1.49 / 10,405.1 - Mean R: 1.220 - IFR: 0.22%
+170 - 2020-08-01 - New / total infections: 1,888 / 1,938,994 - Hospital beds in use: 195 - New / total deaths: 1.49 / 10,406.6 - Mean R: 1.218 - IFR: 0.22%
+171 - 2020-08-02 - New / total infections: 1,963 / 1,940,957 - Hospital beds in use: 204 - New / total deaths: 1.50 / 10,408.1 - Mean R: 1.216 - IFR: 0.21%
+172 - 2020-08-03 - New / total infections: 2,040 / 1,942,997 - Hospital beds in use: 213 - New / total deaths: 1.51 / 10,409.6 - Mean R: 1.213 - IFR: 0.21%
+173 - 2020-08-04 - New / total infections: 2,118 / 1,945,116 - Hospital beds in use: 223 - New / total deaths: 1.52 / 10,411.1 - Mean R: 1.209 - IFR: 0.20%
+174 - 2020-08-05 - New / total infections: 2,197 / 1,947,313 - Hospital beds in use: 232 - New / total deaths: 1.54 / 10,412.6 - Mean R: 1.204 - IFR: 0.20%
+175 - 2020-08-06 - New / total infections: 2,275 / 1,949,588 - Hospital beds in use: 243 - New / total deaths: 1.56 / 10,414.2 - Mean R: 1.199 - IFR: 0.20%
+176 - 2020-08-07 - New / total infections: 2,353 / 1,951,940 - Hospital beds in use: 253 - New / total deaths: 1.59 / 10,415.8 - Mean R: 1.192 - IFR: 0.20%
+177 - 2020-08-08 - New / total infections: 2,428 / 1,954,369 - Hospital beds in use: 264 - New / total deaths: 1.63 / 10,417.4 - Mean R: 1.185 - IFR: 0.20%
+178 - 2020-08-09 - New / total infections: 2,501 / 1,956,869 - Hospital beds in use: 276 - New / total deaths: 1.67 / 10,419.1 - Mean R: 1.175 - IFR: 0.20%
+179 - 2020-08-10 - New / total infections: 2,569 / 1,959,439 - Hospital beds in use: 288 - New / total deaths: 1.72 / 10,420.8 - Mean R: 1.165 - IFR: 0.20%
+180 - 2020-08-11 - New / total infections: 2,633 / 1,962,072 - Hospital beds in use: 300 - New / total deaths: 1.78 / 10,422.6 - Mean R: 1.153 - IFR: 0.20%
+181 - 2020-08-12 - New / total infections: 2,691 / 1,964,763 - Hospital beds in use: 313 - New / total deaths: 1.84 / 10,424.4 - Mean R: 1.141 - IFR: 0.20%
+182 - 2020-08-13 - New / total infections: 2,742 / 1,967,505 - Hospital beds in use: 327 - New / total deaths: 1.91 / 10,426.3 - Mean R: 1.127 - IFR: 0.20%
+183 - 2020-08-14 - New / total infections: 2,786 / 1,970,291 - Hospital beds in use: 340 - New / total deaths: 1.98 / 10,428.3 - Mean R: 1.112 - IFR: 0.20%
+184 - 2020-08-15 - New / total infections: 2,823 / 1,973,114 - Hospital beds in use: 355 - New / total deaths: 2.05 / 10,430.3 - Mean R: 1.097 - IFR: 0.20%
+185 - 2020-08-16 - New / total infections: 2,852 / 1,975,966 - Hospital beds in use: 370 - New / total deaths: 2.13 / 10,432.5 - Mean R: 1.082 - IFR: 0.20%
+186 - 2020-08-17 - New / total infections: 2,875 / 1,978,841 - Hospital beds in use: 385 - New / total deaths: 2.21 / 10,434.7 - Mean R: 1.067 - IFR: 0.20%
+187 - 2020-08-18 - New / total infections: 2,891 / 1,981,732 - Hospital beds in use: 401 - New / total deaths: 2.30 / 10,437.0 - Mean R: 1.053 - IFR: 0.20%
+188 - 2020-08-19 - New / total infections: 2,901 / 1,984,633 - Hospital beds in use: 417 - New / total deaths: 2.39 / 10,439.4 - Mean R: 1.041 - IFR: 0.20%
+189 - 2020-08-20 - New / total infections: 2,907 / 1,987,540 - Hospital beds in use: 433 - New / total deaths: 2.48 / 10,441.8 - Mean R: 1.029 - IFR: 0.20%
+190 - 2020-08-21 - New / total infections: 2,908 / 1,990,448 - Hospital beds in use: 449 - New / total deaths: 2.58 / 10,444.4 - Mean R: 1.019 - IFR: 0.20%
+191 - 2020-08-22 - New / total infections: 2,905 / 1,993,353 - Hospital beds in use: 466 - New / total deaths: 2.68 / 10,447.1 - Mean R: 1.009 - IFR: 0.20%
+192 - 2020-08-23 - New / total infections: 2,900 / 1,996,253 - Hospital beds in use: 482 - New / total deaths: 2.79 / 10,449.9 - Mean R: 1.002 - IFR: 0.20%
+193 - 2020-08-24 - New / total infections: 2,895 / 1,999,148 - Hospital beds in use: 499 - New / total deaths: 2.90 / 10,452.8 - Mean R: 0.996 - IFR: 0.20%
+194 - 2020-08-25 - New / total infections: 2,888 / 2,002,036 - Hospital beds in use: 515 - New / total deaths: 3.01 / 10,455.8 - Mean R: 0.992 - IFR: 0.20%
+195 - 2020-08-26 - New / total infections: 2,880 / 2,004,916 - Hospital beds in use: 530 - New / total deaths: 3.13 / 10,458.9 - Mean R: 0.988 - IFR: 0.20%
+196 - 2020-08-27 - New / total infections: 2,870 / 2,007,786 - Hospital beds in use: 545 - New / total deaths: 3.25 / 10,462.2 - Mean R: 0.985 - IFR: 0.20%
+197 - 2020-08-28 - New / total infections: 2,861 / 2,010,647 - Hospital beds in use: 559 - New / total deaths: 3.37 / 10,465.6 - Mean R: 0.983 - IFR: 0.20%
+198 - 2020-08-29 - New / total infections: 2,851 / 2,013,498 - Hospital beds in use: 573 - New / total deaths: 3.50 / 10,469.1 - Mean R: 0.982 - IFR: 0.20%
+199 - 2020-08-30 - New / total infections: 2,842 / 2,016,339 - Hospital beds in use: 585 - New / total deaths: 3.62 / 10,472.7 - Mean R: 0.981 - IFR: 0.20%
+200 - 2020-08-31 - New / total infections: 2,832 / 2,019,171 - Hospital beds in use: 595 - New / total deaths: 3.75 / 10,476.4 - Mean R: 0.980 - IFR: 0.20%
+201 - 2020-09-01 - New / total infections: 2,823 / 2,021,994 - Hospital beds in use: 605 - New / total deaths: 3.87 / 10,480.3 - Mean R: 0.980 - IFR: 0.20%
+202 - 2020-09-02 - New / total infections: 2,814 / 2,024,808 - Hospital beds in use: 613 - New / total deaths: 3.99 / 10,484.3 - Mean R: 0.980 - IFR: 0.20%
+203 - 2020-09-03 - New / total infections: 2,805 / 2,027,613 - Hospital beds in use: 620 - New / total deaths: 4.11 / 10,488.4 - Mean R: 0.980 - IFR: 0.20%
+204 - 2020-09-04 - New / total infections: 2,797 / 2,030,410 - Hospital beds in use: 625 - New / total deaths: 4.23 / 10,492.6 - Mean R: 0.981 - IFR: 0.20%
+205 - 2020-09-05 - New / total infections: 2,790 / 2,033,200 - Hospital beds in use: 629 - New / total deaths: 4.34 / 10,497.0 - Mean R: 0.981 - IFR: 0.20%
+206 - 2020-09-06 - New / total infections: 2,783 / 2,035,983 - Hospital beds in use: 632 - New / total deaths: 4.45 / 10,501.4 - Mean R: 0.982 - IFR: 0.20%
+207 - 2020-09-07 - New / total infections: 2,777 / 2,038,760 - Hospital beds in use: 634 - New / total deaths: 4.55 / 10,506.0 - Mean R: 0.983 - IFR: 0.20%
+208 - 2020-09-08 - New / total infections: 2,771 / 2,041,531 - Hospital beds in use: 636 - New / total deaths: 4.64 / 10,510.6 - Mean R: 0.984 - IFR: 0.20%
+209 - 2020-09-09 - New / total infections: 2,767 / 2,044,298 - Hospital beds in use: 636 - New / total deaths: 4.73 / 10,515.3 - Mean R: 0.985 - IFR: 0.20%
+210 - 2020-09-10 - New / total infections: 2,763 / 2,047,060 - Hospital beds in use: 636 - New / total deaths: 4.81 / 10,520.2 - Mean R: 0.986 - IFR: 0.20%
+211 - 2020-09-11 - New / total infections: 2,759 / 2,049,820 - Hospital beds in use: 635 - New / total deaths: 4.88 / 10,525.0 - Mean R: 0.988 - IFR: 0.20%
+212 - 2020-09-12 - New / total infections: 2,757 / 2,052,576 - Hospital beds in use: 634 - New / total deaths: 4.95 / 10,530.0 - Mean R: 0.989 - IFR: 0.20%
+213 - 2020-09-13 - New / total infections: 2,755 / 2,055,331 - Hospital beds in use: 632 - New / total deaths: 5.01 / 10,535.0 - Mean R: 0.990 - IFR: 0.20%
+214 - 2020-09-14 - New / total infections: 2,754 / 2,058,085 - Hospital beds in use: 630 - New / total deaths: 5.06 / 10,540.1 - Mean R: 0.991 - IFR: 0.20%
+215 - 2020-09-15 - New / total infections: 2,753 / 2,060,838 - Hospital beds in use: 629 - New / total deaths: 5.11 / 10,545.2 - Mean R: 0.993 - IFR: 0.20%
+216 - 2020-09-16 - New / total infections: 2,753 / 2,063,591 - Hospital beds in use: 627 - New / total deaths: 5.15 / 10,550.3 - Mean R: 0.994 - IFR: 0.20%
+217 - 2020-09-17 - New / total infections: 2,754 / 2,066,345 - Hospital beds in use: 625 - New / total deaths: 5.19 / 10,555.5 - Mean R: 0.995 - IFR: 0.20%
+218 - 2020-09-18 - New / total infections: 2,756 / 2,069,101 - Hospital beds in use: 623 - New / total deaths: 5.22 / 10,560.7 - Mean R: 0.996 - IFR: 0.20%
+219 - 2020-09-19 - New / total infections: 2,758 / 2,071,859 - Hospital beds in use: 621 - New / total deaths: 5.24 / 10,566.0 - Mean R: 0.998 - IFR: 0.20%
+220 - 2020-09-20 - New / total infections: 2,761 / 2,074,620 - Hospital beds in use: 619 - New / total deaths: 5.27 / 10,571.2 - Mean R: 0.999 - IFR: 0.20%
+221 - 2020-09-21 - New / total infections: 2,765 / 2,077,385 - Hospital beds in use: 617 - New / total deaths: 5.28 / 10,576.5 - Mean R: 1.000 - IFR: 0.20%
+222 - 2020-09-22 - New / total infections: 2,769 / 2,080,153 - Hospital beds in use: 616 - New / total deaths: 5.30 / 10,581.8 - Mean R: 1.001 - IFR: 0.20%
+223 - 2020-09-23 - New / total infections: 2,774 / 2,082,927 - Hospital beds in use: 614 - New / total deaths: 5.31 / 10,587.1 - Mean R: 1.003 - IFR: 0.20%
+224 - 2020-09-24 - New / total infections: 2,779 / 2,085,706 - Hospital beds in use: 612 - New / total deaths: 5.32 / 10,592.5 - Mean R: 1.004 - IFR: 0.20%
+225 - 2020-09-25 - New / total infections: 2,785 / 2,088,492 - Hospital beds in use: 611 - New / total deaths: 5.32 / 10,597.8 - Mean R: 1.005 - IFR: 0.20%
+226 - 2020-09-26 - New / total infections: 2,792 / 2,091,284 - Hospital beds in use: 610 - New / total deaths: 5.33 / 10,603.1 - Mean R: 1.006 - IFR: 0.20%
+227 - 2020-09-27 - New / total infections: 2,800 / 2,094,084 - Hospital beds in use: 609 - New / total deaths: 5.33 / 10,608.4 - Mean R: 1.007 - IFR: 0.20%
+228 - 2020-09-28 - New / total infections: 2,808 / 2,096,892 - Hospital beds in use: 608 - New / total deaths: 5.33 / 10,613.8 - Mean R: 1.009 - IFR: 0.20%
+229 - 2020-09-29 - New / total infections: 2,817 / 2,099,709 - Hospital beds in use: 607 - New / total deaths: 5.33 / 10,619.1 - Mean R: 1.010 - IFR: 0.20%
+230 - 2020-09-30 - New / total infections: 2,826 / 2,102,535 - Hospital beds in use: 607 - New / total deaths: 5.33 / 10,624.4 - Mean R: 1.011 - IFR: 0.20%
+231 - 2020-10-01 - New / total infections: 2,836 / 2,105,371 - Hospital beds in use: 606 - New / total deaths: 5.32 / 10,629.7 - Mean R: 1.012 - IFR: 0.20%
+232 - 2020-10-02 - New / total infections: 2,847 / 2,108,219 - Hospital beds in use: 606 - New / total deaths: 5.32 / 10,635.1 - Mean R: 1.013 - IFR: 0.20%
+233 - 2020-10-03 - New / total infections: 2,859 / 2,111,077 - Hospital beds in use: 606 - New / total deaths: 5.32 / 10,640.4 - Mean R: 1.014 - IFR: 0.20%
+234 - 2020-10-04 - New / total infections: 2,871 / 2,113,948 - Hospital beds in use: 606 - New / total deaths: 5.31 / 10,645.7 - Mean R: 1.015 - IFR: 0.20%
+235 - 2020-10-05 - New / total infections: 2,884 / 2,116,832 - Hospital beds in use: 606 - New / total deaths: 5.31 / 10,651.0 - Mean R: 1.017 - IFR: 0.20%
+236 - 2020-10-06 - New / total infections: 2,897 / 2,119,729 - Hospital beds in use: 607 - New / total deaths: 5.30 / 10,656.3 - Mean R: 1.018 - IFR: 0.20%
+237 - 2020-10-07 - New / total infections: 2,911 / 2,122,641 - Hospital beds in use: 607 - New / total deaths: 5.29 / 10,661.6 - Mean R: 1.019 - IFR: 0.20%
+238 - 2020-10-08 - New / total infections: 2,926 / 2,125,567 - Hospital beds in use: 608 - New / total deaths: 5.29 / 10,666.9 - Mean R: 1.020 - IFR: 0.20%
+239 - 2020-10-09 - New / total infections: 2,942 / 2,128,509 - Hospital beds in use: 608 - New / total deaths: 5.29 / 10,672.2 - Mean R: 1.021 - IFR: 0.20%
+240 - 2020-10-10 - New / total infections: 2,958 / 2,131,467 - Hospital beds in use: 609 - New / total deaths: 5.28 / 10,677.4 - Mean R: 1.022 - IFR: 0.20%
+241 - 2020-10-11 - New / total infections: 2,975 / 2,134,442 - Hospital beds in use: 610 - New / total deaths: 5.28 / 10,682.7 - Mean R: 1.023 - IFR: 0.20%
+242 - 2020-10-12 - New / total infections: 2,993 / 2,137,435 - Hospital beds in use: 612 - New / total deaths: 5.28 / 10,688.0 - Mean R: 1.024 - IFR: 0.20%
+243 - 2020-10-13 - New / total infections: 3,011 / 2,140,447 - Hospital beds in use: 613 - New / total deaths: 5.28 / 10,693.3 - Mean R: 1.025 - IFR: 0.20%
+244 - 2020-10-14 - New / total infections: 3,031 / 2,143,477 - Hospital beds in use: 615 - New / total deaths: 5.28 / 10,698.6 - Mean R: 1.026 - IFR: 0.20%
+245 - 2020-10-15 - New / total infections: 3,051 / 2,146,528 - Hospital beds in use: 616 - New / total deaths: 5.28 / 10,703.8 - Mean R: 1.028 - IFR: 0.20%
+246 - 2020-10-16 - New / total infections: 3,071 / 2,149,599 - Hospital beds in use: 618 - New / total deaths: 5.28 / 10,709.1 - Mean R: 1.029 - IFR: 0.20%
+247 - 2020-10-17 - New / total infections: 3,093 / 2,152,692 - Hospital beds in use: 620 - New / total deaths: 5.28 / 10,714.4 - Mean R: 1.030 - IFR: 0.20%
+248 - 2020-10-18 - New / total infections: 3,115 / 2,155,807 - Hospital beds in use: 622 - New / total deaths: 5.28 / 10,719.7 - Mean R: 1.031 - IFR: 0.20%
+249 - 2020-10-19 - New / total infections: 3,138 / 2,158,945 - Hospital beds in use: 624 - New / total deaths: 5.29 / 10,725.0 - Mean R: 1.032 - IFR: 0.20%
+250 - 2020-10-20 - New / total infections: 3,162 / 2,162,107 - Hospital beds in use: 627 - New / total deaths: 5.30 / 10,730.3 - Mean R: 1.033 - IFR: 0.20%
+251 - 2020-10-21 - New / total infections: 3,187 / 2,165,294 - Hospital beds in use: 629 - New / total deaths: 5.30 / 10,735.6 - Mean R: 1.034 - IFR: 0.20%
+252 - 2020-10-22 - New / total infections: 3,212 / 2,168,506 - Hospital beds in use: 632 - New / total deaths: 5.31 / 10,740.9 - Mean R: 1.035 - IFR: 0.20%
+253 - 2020-10-23 - New / total infections: 3,239 / 2,171,745 - Hospital beds in use: 635 - New / total deaths: 5.32 / 10,746.2 - Mean R: 1.036 - IFR: 0.20%
+254 - 2020-10-24 - New / total infections: 3,266 / 2,175,011 - Hospital beds in use: 638 - New / total deaths: 5.33 / 10,751.5 - Mean R: 1.037 - IFR: 0.20%
+255 - 2020-10-25 - New / total infections: 3,294 / 2,178,305 - Hospital beds in use: 641 - New / total deaths: 5.34 / 10,756.9 - Mean R: 1.038 - IFR: 0.20%
+256 - 2020-10-26 - New / total infections: 3,323 / 2,181,629 - Hospital beds in use: 644 - New / total deaths: 5.36 / 10,762.2 - Mean R: 1.039 - IFR: 0.20%
+257 - 2020-10-27 - New / total infections: 3,353 / 2,184,982 - Hospital beds in use: 647 - New / total deaths: 5.37 / 10,767.6 - Mean R: 1.041 - IFR: 0.20%
+258 - 2020-10-28 - New / total infections: 3,384 / 2,188,367 - Hospital beds in use: 651 - New / total deaths: 5.39 / 10,773.0 - Mean R: 1.042 - IFR: 0.20%
+259 - 2020-10-29 - New / total infections: 3,416 / 2,191,783 - Hospital beds in use: 655 - New / total deaths: 5.41 / 10,778.4 - Mean R: 1.043 - IFR: 0.20%
+260 - 2020-10-30 - New / total infections: 3,449 / 2,195,232 - Hospital beds in use: 659 - New / total deaths: 5.43 / 10,783.8 - Mean R: 1.044 - IFR: 0.20%
+261 - 2020-10-31 - New / total infections: 3,483 / 2,198,716 - Hospital beds in use: 663 - New / total deaths: 5.45 / 10,789.3 - Mean R: 1.045 - IFR: 0.20%
+262 - 2020-11-01 - New / total infections: 3,518 / 2,202,234 - Hospital beds in use: 667 - New / total deaths: 5.47 / 10,794.7 - Mean R: 1.046 - IFR: 0.20%
+263 - 2020-11-02 - New / total infections: 3,554 / 2,205,788 - Hospital beds in use: 671 - New / total deaths: 5.49 / 10,800.2 - Mean R: 1.047 - IFR: 0.20%
+264 - 2020-11-03 - New / total infections: 3,591 / 2,209,380 - Hospital beds in use: 676 - New / total deaths: 5.51 / 10,805.7 - Mean R: 1.048 - IFR: 0.20%
+265 - 2020-11-04 - New / total infections: 3,630 / 2,213,009 - Hospital beds in use: 681 - New / total deaths: 5.54 / 10,811.3 - Mean R: 1.049 - IFR: 0.20%
+266 - 2020-11-05 - New / total infections: 3,669 / 2,216,678 - Hospital beds in use: 686 - New / total deaths: 5.56 / 10,816.8 - Mean R: 1.050 - IFR: 0.20%
+267 - 2020-11-06 - New / total infections: 3,710 / 2,220,388 - Hospital beds in use: 691 - New / total deaths: 5.59 / 10,822.4 - Mean R: 1.051 - IFR: 0.20%
+268 - 2020-11-07 - New / total infections: 3,751 / 2,224,139 - Hospital beds in use: 696 - New / total deaths: 5.62 / 10,828.1 - Mean R: 1.052 - IFR: 0.20%
+269 - 2020-11-08 - New / total infections: 3,794 / 2,227,933 - Hospital beds in use: 702 - New / total deaths: 5.65 / 10,833.7 - Mean R: 1.053 - IFR: 0.20%
+270 - 2020-11-09 - New / total infections: 3,838 / 2,231,771 - Hospital beds in use: 707 - New / total deaths: 5.68 / 10,839.4 - Mean R: 1.054 - IFR: 0.20%
+271 - 2020-11-10 - New / total infections: 3,884 / 2,235,655 - Hospital beds in use: 713 - New / total deaths: 5.72 / 10,845.1 - Mean R: 1.055 - IFR: 0.20%
+272 - 2020-11-11 - New / total infections: 3,930 / 2,239,585 - Hospital beds in use: 719 - New / total deaths: 5.75 / 10,850.9 - Mean R: 1.056 - IFR: 0.20%
+273 - 2020-11-12 - New / total infections: 3,978 / 2,243,564 - Hospital beds in use: 725 - New / total deaths: 5.79 / 10,856.6 - Mean R: 1.058 - IFR: 0.20%
+274 - 2020-11-13 - New / total infections: 4,028 / 2,247,592 - Hospital beds in use: 732 - New / total deaths: 5.83 / 10,862.5 - Mean R: 1.059 - IFR: 0.20%
+275 - 2020-11-14 - New / total infections: 4,079 / 2,251,671 - Hospital beds in use: 738 - New / total deaths: 5.87 / 10,868.3 - Mean R: 1.060 - IFR: 0.20%
+276 - 2020-11-15 - New / total infections: 4,131 / 2,255,802 - Hospital beds in use: 745 - New / total deaths: 5.91 / 10,874.3 - Mean R: 1.061 - IFR: 0.20%
+277 - 2020-11-16 - New / total infections: 4,185 / 2,259,986 - Hospital beds in use: 752 - New / total deaths: 5.95 / 10,880.2 - Mean R: 1.062 - IFR: 0.20%
+278 - 2020-11-17 - New / total infections: 4,240 / 2,264,226 - Hospital beds in use: 759 - New / total deaths: 5.99 / 10,886.2 - Mean R: 1.063 - IFR: 0.20%
+279 - 2020-11-18 - New / total infections: 4,297 / 2,268,523 - Hospital beds in use: 767 - New / total deaths: 6.04 / 10,892.2 - Mean R: 1.064 - IFR: 0.20%
+280 - 2020-11-19 - New / total infections: 4,355 / 2,272,879 - Hospital beds in use: 775 - New / total deaths: 6.09 / 10,898.3 - Mean R: 1.065 - IFR: 0.20%
+281 - 2020-11-20 - New / total infections: 4,416 / 2,277,294 - Hospital beds in use: 783 - New / total deaths: 6.13 / 10,904.5 - Mean R: 1.066 - IFR: 0.20%
+282 - 2020-11-21 - New / total infections: 4,477 / 2,281,772 - Hospital beds in use: 791 - New / total deaths: 6.19 / 10,910.6 - Mean R: 1.067 - IFR: 0.20%
+283 - 2020-11-22 - New / total infections: 4,541 / 2,286,313 - Hospital beds in use: 799 - New / total deaths: 6.24 / 10,916.9 - Mean R: 1.068 - IFR: 0.20%
+284 - 2020-11-23 - New / total infections: 4,606 / 2,290,919 - Hospital beds in use: 808 - New / total deaths: 6.29 / 10,923.2 - Mean R: 1.069 - IFR: 0.20%
+285 - 2020-11-24 - New / total infections: 4,673 / 2,295,592 - Hospital beds in use: 817 - New / total deaths: 6.35 / 10,929.5 - Mean R: 1.070 - IFR: 0.20%
+286 - 2020-11-25 - New / total infections: 4,743 / 2,300,335 - Hospital beds in use: 826 - New / total deaths: 6.40 / 10,935.9 - Mean R: 1.071 - IFR: 0.20%
+287 - 2020-11-26 - New / total infections: 4,814 / 2,305,148 - Hospital beds in use: 836 - New / total deaths: 6.46 / 10,942.4 - Mean R: 1.072 - IFR: 0.20%
+288 - 2020-11-27 - New / total infections: 4,887 / 2,310,035 - Hospital beds in use: 845 - New / total deaths: 6.52 / 10,948.9 - Mean R: 1.073 - IFR: 0.20%
+289 - 2020-11-28 - New / total infections: 4,962 / 2,314,997 - Hospital beds in use: 855 - New / total deaths: 6.59 / 10,955.5 - Mean R: 1.075 - IFR: 0.20%
+290 - 2020-11-29 - New / total infections: 5,039 / 2,320,035 - Hospital beds in use: 866 - New / total deaths: 6.65 / 10,962.1 - Mean R: 1.076 - IFR: 0.20%
+291 - 2020-11-30 - New / total infections: 5,118 / 2,325,154 - Hospital beds in use: 876 - New / total deaths: 6.72 / 10,968.9 - Mean R: 1.077 - IFR: 0.20%
+292 - 2020-12-01 - New / total infections: 5,200 / 2,330,354 - Hospital beds in use: 887 - New / total deaths: 6.79 / 10,975.7 - Mean R: 1.078 - IFR: 0.20%
+293 - 2020-12-02 - New / total infections: 5,284 / 2,335,637 - Hospital beds in use: 898 - New / total deaths: 6.86 / 10,982.5 - Mean R: 1.079 - IFR: 0.20%
+294 - 2020-12-03 - New / total infections: 5,370 / 2,341,007 - Hospital beds in use: 910 - New / total deaths: 6.93 / 10,989.4 - Mean R: 1.080 - IFR: 0.20%
+295 - 2020-12-04 - New / total infections: 5,459 / 2,346,466 - Hospital beds in use: 922 - New / total deaths: 7.01 / 10,996.4 - Mean R: 1.081 - IFR: 0.20%
+296 - 2020-12-05 - New / total infections: 5,550 / 2,352,016 - Hospital beds in use: 934 - New / total deaths: 7.08 / 11,003.5 - Mean R: 1.082 - IFR: 0.20%
+297 - 2020-12-06 - New / total infections: 5,644 / 2,357,660 - Hospital beds in use: 947 - New / total deaths: 7.16 / 11,010.7 - Mean R: 1.083 - IFR: 0.20%
+298 - 2020-12-07 - New / total infections: 5,741 / 2,363,401 - Hospital beds in use: 960 - New / total deaths: 7.25 / 11,017.9 - Mean R: 1.084 - IFR: 0.20%
+299 - 2020-12-08 - New / total infections: 5,840 / 2,369,241 - Hospital beds in use: 973 - New / total deaths: 7.33 / 11,025.3 - Mean R: 1.085 - IFR: 0.20%
+300 - 2020-12-09 - New / total infections: 5,942 / 2,375,183 - Hospital beds in use: 986 - New / total deaths: 7.42 / 11,032.7 - Mean R: 1.086 - IFR: 0.20%
+-------------------------------------
+End of simulation       : 2020-12-09
+Total infections        : 2,375,183
+Peak hospital beds used : 13,810
+Total deaths            : 11,033
+====================================================
+Done - Current time: 2020-11-09 11:59:27.875928

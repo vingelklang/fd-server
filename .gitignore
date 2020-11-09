@@ -11,6 +11,7 @@ test-config.edn
 profiles.clj
 /.env
 .nrepl-port
-
+.DS_Store
 /node_modules
 /log
+/.idea/libraries/
