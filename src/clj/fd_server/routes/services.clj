@@ -10,8 +10,12 @@
     [fd-server.routes.services.graphql :as graphql]
     [fd-server.middleware.formats :as formats]
     [fd-server.middleware.exception :as exception]
+    [fd-server.models :as models]
+    [fd-server.db.core :as db]
     [ring.util.http-response :refer :all]
-    [clojure.java.io :as io]))
+    [tick.alpha.api :as t]
+    [clojure.tools.logging :as log]))
+
 
 (defn test-range []
   (take 30 (random-sample 0.1 (range (+ 1600 (rand-int 100)) (+ 1990 (rand-int 100))))))
@@ -19,7 +23,8 @@
 (defn test-data []
   {:M01 (test-range)
    :M02 (test-range)
-   :M03 (test-range)})
+   :M03 (test-range)
+   :M04 (test-range)})
 
 (defn service-routes []
   ["/api"
@@ -56,50 +61,38 @@
              {:url "/api/swagger.json"
               :config {:validator-url nil}})}]]
 
-   ["/ping"
-    {:get (constantly (ok {:message "pong"}))}]
+   ["/push-data-to-db"
+    {:get {:summary "See if there are new files, and add them to the DB"
+           :handler (fn [_]
+                      (when (models/check-if-models-complete)
+                        (log/info "There are new models for today")
+                        (let [today (t/today)
+                              {:keys [corona-pred covid-19-pred delphi yyg] :as all}
+                              (models/combined-result (t/today))]
+                          (db/insert-day! {:day today
+                                           :M01 (-> corona-pred vals vec)
+                                           :M02 (-> covid-19-pred vals vec)
+                                           :M03 (-> delphi vals vec)
+                                           :M04 (-> yyg vals vec)})))
+                      {:status 200})}}]
+
+   ["/get-today"
+    {:get {:summary "See if there are new files, and add them to the DB"
+           :handler (fn [_]
+                        (let [today (t/today)]
+                          {:status 200 :body (db/get-by-saved-on {:day today})}))}}]
+
+   ["/get-by-day"
+    {:get {:summary "See if there are new files, and add them to the DB"
+           :parameters {:query {:day string?}}
+           :handler (fn [{{{:keys [day]} :query} :parameters}]
+                      (println day)
+                      (let [parsed (t/parse day)]
+                        {:status 200 :body (db/get-by-saved-on {:day parsed})}))}}]
 
    ["/test-data"
     {:get (constantly (ok (test-data)))}]
    
    ["/graphql" {:no-doc true
-                :post (fn [req] (ok (graphql/execute-request (-> req :body slurp))))}]
+                :post (fn [req] (ok (graphql/execute-request (-> req :body slurp))))}]])
 
-   ["/math"
-    {:swagger {:tags ["math"]}}
-
-    ["/plus"
-     {:get {:summary "plus with spec query parameters"
-            :parameters {:query {:x int?, :y int?}}
-            :responses {200 {:body {:total pos-int?}}}
-            :handler (fn [{{{:keys [x y]} :query} :parameters}]
-                       {:status 200
-                        :body {:total (+ x y)}})}
-      :post {:summary "plus with spec body parameters"
-             :parameters {:body {:x int?, :y int?}}
-             :responses {200 {:body {:total pos-int?}}}
-             :handler (fn [{{{:keys [x y]} :body} :parameters}]
-                        {:status 200
-                         :body {:total (+ x y)}})}}]]
-
-   ["/files"
-    {:swagger {:tags ["files"]}}
-
-    ["/upload"
-     {:post {:summary "upload a file"
-             :parameters {:multipart {:file multipart/temp-file-part}}
-             :responses {200 {:body {:name string?, :size int?}}}
-             :handler (fn [{{{:keys [file]} :multipart} :parameters}]
-                        {:status 200
-                         :body {:name (:filename file)
-                                :size (:size file)}})}}]
-
-    ["/download"
-     {:get {:summary "downloads a file"
-            :swagger {:produces ["image/png"]}
-            :handler (fn [_]
-                       {:status 200
-                        :headers {"Content-Type" "image/png"}
-                        :body (-> "public/img/warning_clojure.png"
-                                  (io/resource)
-                                  (io/input-stream))})}}]]])

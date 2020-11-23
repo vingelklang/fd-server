@@ -14,7 +14,7 @@
                  [cprop "0.1.17"]
                  [expound "0.8.6"]
                  [funcool/struct "1.4.0"]
-                 [luminus-migrations "0.7.0"]
+                 [luminus-migrations "0.7.1"]
                  [luminus-transit "0.1.2"]
                  [luminus-undertow "0.1.7"]
                  [luminus/ring-ttl-session "0.3.3"]
@@ -41,7 +41,7 @@
                  [selmer "1.12.31"]
 
                  ;; Glue:
-                 [tupelo "20.08.27b"]
+                 [tupelo "20.11.18a"]
                  [clj-commons/fs "1.5.2"]
                  [clj-commons/conch "0.9.2"]]
 

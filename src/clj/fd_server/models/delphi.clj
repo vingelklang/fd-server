@@ -5,8 +5,8 @@
     [tupelo.string :as tstr]
     [tupelo.parse :as tp]))
 
-(defn get-today []
-  (let [data-file (slurp "resources/data/Global_V2_20201109.csv")
+(defn get-latest [path]
+  (let [data-file (slurp path)
         csv-parsed (tcsv/entities->attrs (filter #(= "Germany" (:Country %)) (tcsv/parse->entities data-file)))
         standardized (tcsv/attrs->entities
                          (update csv-parsed :Total-Detected
@@ -19,11 +19,12 @@
                                            (let [inter (- v (nth double-col (dec idx)))]
                                              inter)))
                                        double-col)))))
-        final (apply sorted-map (rest (map (fn [{:keys [Total-Detected Day]}]
-                                             [(t/date Day) Total-Detected]) standardized)))]
+        with-days (rest
+                    (map (fn [{:keys [Total-Detected Day]}]
+                           [(t/date Day) Total-Detected])
+                         standardized))
+        tomorrow (t/tomorrow)
+        end-day (t/+ (t/tomorrow) (t/new-period 29 :days))
+        next-thirty (filter #(t/<= tomorrow (first %) end-day) with-days)
+        final (apply sorted-map (flatten next-thirty))]
     final))
-
-(comment
-  get-today)
-
-#_(map (fn [{:keys [Day Total-Detected]}]))

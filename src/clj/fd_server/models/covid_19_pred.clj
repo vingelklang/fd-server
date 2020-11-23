@@ -5,8 +5,8 @@
     [tupelo.parse :as tp]
     [tupelo.string :as ts]))
 
-(defn get-today []
-  (let [file (drop 3 (string/split-lines (string/trim (slurp "resources/data/covid-19-pred.txt"))))
+(defn get-latest [path]
+  (let [file (drop 3 (string/split-lines (string/trim (slurp path))))
         date-plus-val (map #(-> % (string/split #":")) file)
         with-days (mapv (fn add-time [[t d]]
                           (let [[day month year] (mapv string/trim (-> t string/trim (string/split #" ")))
