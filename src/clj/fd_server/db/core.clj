@@ -5,8 +5,11 @@
     [next.jdbc.prepare]
     [next.jdbc.result-set]
     [clojure.tools.logging :as log]
+    [tick.alpha.api :as t]
     [conman.core :as conman]
     [fd-server.config :refer [env]]
+    [fd-server.models :as models]
+    [tupelo.core :as tc]
     [mount.core :refer [defstate]])
   (:import (org.postgresql.util PGobject)))
 
@@ -19,6 +22,43 @@
   :stop (conman/disconnect! *db*))
 
 (conman/bind-connection *db* "sql/queries.sql")
+
+(defn insert-predictions-for-today
+  "Manages storage of new data."
+  []
+  (log/info "Have we already saved?")
+  (when (get-by-saved-on {:day (t/today)})
+
+   (log/info "Checking if new models are available.")
+   (when (models/check-if-models-complete)
+
+     (log/info "Attempt to parse and save new models.")
+     (let [today (t/today)
+           {:keys [corona-pred covid-19-pred delphi yyg] :as all}
+           (models/combined-result (t/today))]
+
+       (insert-day! {:day today
+                     :M01 (-> corona-pred vals vec)
+                     :M02 (-> covid-19-pred vals vec)
+                     :M03 (-> delphi vals vec)
+                     :M04 (-> yyg vals vec)})))))
+
+(defn set-interval [callback ms]
+  (future (while true (do (Thread/sleep ms) (callback)))))
+
+(defstate model-checker
+          :start (set-interval insert-predictions-for-today 60000)
+          :stop (future-cancel model-checker))
+
+(comment defn calculate-min-max []
+  (let [total (get-all-predictions)]
+    (reduce
+      (fn [store v])
+      {:m01 {:min 0 :max 0}
+       :m02 {:min 0 :max 0}
+       :m03 {:min 0 :max 0}
+       :m04 {:min 0 :max 0}}
+      total)))
 
 (defn pgobj->clj [^org.postgresql.util.PGobject pgobj]
   (let [type (.getType pgobj)

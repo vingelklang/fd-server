@@ -1,5 +1,7 @@
 (ns fd-server.routes.services
   (:require
+    [spec-tools.data-spec :as ds]
+    [clojure.spec.alpha :as s]
     [reitit.swagger :as swagger]
     [reitit.swagger-ui :as swagger-ui]
     [reitit.ring.coercion :as coercion]
@@ -16,6 +18,19 @@
     [tick.alpha.api :as t]
     [clojure.tools.logging :as log]))
 
+(s/def ::predictions (s/coll-of number? :kind vector? :count 30))
+
+(def response-structure
+  {:day t/date?
+   :m01 ::predictions
+   :m02 ::predictions
+   :m03 ::predictions
+   :m04 ::predictions})
+
+(def response-spec
+  (ds/spec
+    {:name ::response
+     :spec response-structure}))
 
 (defn test-range []
   (take 30 (random-sample 0.1 (range (+ 1600 (rand-int 100)) (+ 1990 (rand-int 100))))))
@@ -50,8 +65,8 @@
 
    ;; swagger documentation
    ["" {:no-doc true
-        :swagger {:info {:title "my-api"
-                         :description "https://cljdoc.org/d/metosin/reitit"}}}
+        :swagger {:info {:title "FD API"
+                         :description "Interface to COVID-19 oracles."}}}
 
     ["/swagger.json"
      {:get (swagger/create-swagger-handler)}]
@@ -61,38 +76,40 @@
              {:url "/api/swagger.json"
               :config {:validator-url nil}})}]]
 
-   ["/push-data-to-db"
-    {:get {:summary "See if there are new files, and add them to the DB"
-           :handler (fn [_]
-                      (when (models/check-if-models-complete)
-                        (log/info "There are new models for today")
-                        (let [today (t/today)
-                              {:keys [corona-pred covid-19-pred delphi yyg] :as all}
-                              (models/combined-result (t/today))]
-                          (db/insert-day! {:day today
-                                           :M01 (-> corona-pred vals vec)
-                                           :M02 (-> covid-19-pred vals vec)
-                                           :M03 (-> delphi vals vec)
-                                           :M04 (-> yyg vals vec)})))
-                      {:status 200})}}]
+   ["" {:swagger {:tags ["Core"]}}
+    ["/get-latest"
+     {:get {:summary "Get the most recent value."
+            :responses {200 {:body response-spec}}
+            :handler (fn [_]
+                      (let [r (db/get-latest)]
+                        (log/info r)
+                        {:status 200 :body r}))}}]
 
-   ["/get-today"
-    {:get {:summary "See if there are new files, and add them to the DB"
-           :handler (fn [_]
-                        (let [today (t/today)]
-                          {:status 200 :body (db/get-by-saved-on {:day today})}))}}]
+    ["/get-today"
+      {:get {:summary "See if there are new files, and add them to the DB"
+             :responses {200 {:body response-spec}}
+             :handler (fn [_]
+                          (let [today (t/yesterday)
+                                r (db/get-by-saved-on {:day today})]
+                            (log/info r)
+                            {:status 200 :body r}))}}]
 
-   ["/get-by-day"
-    {:get {:summary "See if there are new files, and add them to the DB"
-           :parameters {:query {:day string?}}
-           :handler (fn [{{{:keys [day]} :query} :parameters}]
-                      (println day)
-                      (let [parsed (t/parse day)]
-                        {:status 200 :body (db/get-by-saved-on {:day parsed})}))}}]
+    ["/get-by-day"
+      {:get {:summary "Provide a date to retrieve the values for that day. i.e: 23-11-2020"
+             :parameters {:query {:day string?}}
+             :responses {200 {:body response-spec}}
+             :handler (fn [{{{:keys [day]} :query} :parameters}]
+                        (log/info day)
+                        (let [parsed (t/parse day)]
+                          {:status 200 :body (db/get-by-saved-on {:day parsed})}))}}]]
 
-   ["/test-data"
-    {:get (constantly (ok (test-data)))}]
-   
+   ["/debug" {:swagger {:tags ["Debug"]}}
+     ["/push-data-to-db"
+      {:get {:summary "Bypass the automated system and check if new predictions are available."
+             :handler (fn [_]
+                        (db/insert-predictions-for-today)
+                        {:status 200})}}]]
+
    ["/graphql" {:no-doc true
-                :post (fn [req] (ok (graphql/execute-request (-> req :body slurp))))}]])
+                 :post (fn [req] (ok (graphql/execute-request (-> req :body slurp))))}]])
 
