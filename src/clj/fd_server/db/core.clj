@@ -23,6 +23,25 @@
 
 (conman/bind-connection *db* "sql/queries.sql")
 
+(defn calculate-min-max [total]
+  (reduce
+    (fn [store v]
+      (into {}
+            (map
+              (fn [[k {:keys [mi ma]}]]
+                (let [row (k v)]
+                  {k {:mi (min mi (apply min row))
+                      :ma (max ma (apply max row))}}))
+              store)))
+    {:m01 {:ma 0 :mi Integer/MAX_VALUE}
+     :m02 {:ma 0 :mi Integer/MAX_VALUE}
+     :m03 {:ma 0 :mi Integer/MAX_VALUE}
+     :m04 {:ma 0 :mi Integer/MAX_VALUE}}
+    total))
+
+(defn get-min-max []
+  (calculate-min-max (get-all-predictions)))
+
 (defn insert-predictions-for-today
   "Manages storage of new data."
   []
@@ -43,22 +62,14 @@
                      :M03 (-> delphi vals vec)
                      :M04 (-> yyg vals vec)})))))
 
+
 (defn set-interval [callback ms]
   (future (while true (do (Thread/sleep ms) (callback)))))
 
 (defstate model-checker
+          ;; TODO: Stop checking if fn has already placed new values today.
           :start (set-interval insert-predictions-for-today 60000)
           :stop (future-cancel model-checker))
-
-(comment defn calculate-min-max []
-  (let [total (get-all-predictions)]
-    (reduce
-      (fn [store v])
-      {:m01 {:min 0 :max 0}
-       :m02 {:min 0 :max 0}
-       :m03 {:min 0 :max 0}
-       :m04 {:min 0 :max 0}}
-      total)))
 
 (defn pgobj->clj [^org.postgresql.util.PGobject pgobj]
   (let [type (.getType pgobj)

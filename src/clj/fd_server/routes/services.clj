@@ -20,12 +20,24 @@
 
 (s/def ::predictions (s/coll-of number? :kind vector? :count 30))
 
+(def mima-structure
+  {:mi number? :ma number?})
+
+(def mima-spec
+  (ds/spec
+    {:name ::mima
+     :spec mima-structure}))
+
 (def response-structure
   {:day t/date?
    :m01 ::predictions
    :m02 ::predictions
    :m03 ::predictions
-   :m04 ::predictions})
+   :m04 ::predictions
+   :mima {:m01 mima-spec
+          :m02 mima-spec
+          :m03 mima-spec
+          :m04 mima-spec}})
 
 (def response-spec
   (ds/spec
@@ -81,7 +93,7 @@
      {:get {:summary "Get the most recent value."
             :responses {200 {:body response-spec}}
             :handler (fn [_]
-                      (let [r (db/get-latest)]
+                      (let [r (assoc (db/get-latest) :mima (db/get-min-max))]
                         (log/info r)
                         {:status 200 :body r}))}}]
 
@@ -90,7 +102,7 @@
              :responses {200 {:body response-spec}}
              :handler (fn [_]
                           (let [today (t/yesterday)
-                                r (db/get-by-saved-on {:day today})]
+                                r (assoc (db/get-by-saved-on {:day today}) :mima (db/get-min-max))]
                             (log/info r)
                             {:status 200 :body r}))}}]
 
@@ -101,7 +113,16 @@
              :handler (fn [{{{:keys [day]} :query} :parameters}]
                         (log/info day)
                         (let [parsed (t/parse day)]
-                          {:status 200 :body (db/get-by-saved-on {:day parsed})}))}}]]
+                          {:status 200 :body (assoc (db/get-by-saved-on {:day parsed}) :mima (db/get-min-max))}))}}]
+
+    ["/get-total-min-max"
+     {:get {:summary "Get the most recent value."
+            ;;:responses {200 {:body response-spec}}
+            :handler (fn [_]
+                       (let [r (db/get-min-max)]
+                         (log/info r)
+                         {:status 200 :body r}))}}]]
+
 
    ["/debug" {:swagger {:tags ["Debug"]}}
      ["/push-data-to-db"
