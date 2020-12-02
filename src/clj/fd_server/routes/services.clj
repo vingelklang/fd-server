@@ -94,20 +94,18 @@
             :responses {200 {:body response-spec}}
             :handler (fn [_]
                       (let [r (assoc (db/get-latest) :mima (db/get-min-max))]
-                        (log/info r)
                         {:status 200 :body r}))}}]
 
     ["/get-today"
       {:get {:summary "See if there are new files, and add them to the DB"
              :responses {200 {:body response-spec}}
              :handler (fn [_]
-                          (let [today (t/yesterday)
+                          (let [today (t/today)
                                 r (assoc (db/get-by-saved-on {:day today}) :mima (db/get-min-max))]
-                            (log/info r)
                             {:status 200 :body r}))}}]
 
     ["/get-by-day"
-      {:get {:summary "Provide a date to retrieve the values for that day. i.e: 23-11-2020"
+      {:get {:summary "Provide a date to retrieve the values for that day. i.e: 2020/11/30"
              :parameters {:query {:day string?}}
              :responses {200 {:body response-spec}}
              :handler (fn [{{{:keys [day]} :query} :parameters}]
@@ -121,15 +119,32 @@
             :handler (fn [_]
                        (let [r (db/get-min-max)]
                          (log/info r)
-                         {:status 200 :body r}))}}]]
-
+                         {:status 200 :body r}))}}]
+    ["/get-last-n-days"
+     {:get {:summary "Lists the last n days."
+            ;;:responses {200 {:body response-spec}}
+            :parameters {:query {:n integer?}}
+            :handler (fn [{{{:keys [n]} :query} :parameters}]
+                       {:status 200 :body (take n (db/get-all-predictions))})}}]]
 
    ["/debug" {:swagger {:tags ["Debug"]}}
-     ["/push-data-to-db"
-      {:get {:summary "Bypass the automated system and check if new predictions are available."
-             :handler (fn [_]
-                        (db/insert-predictions-for-today)
-                        {:status 200})}}]]
+
+    ["/check-folders"
+     {:get {:summary "Check the status of the model folders."
+            ;;:responses {200 {:body response-spec}}
+            :handler (fn [_]
+                       {:status 200 :body (models/check-folders)})}}]
+
+    #_["/check-folders"
+       {:get {:summary "Check the status of the model folders."
+              ;;:responses {200 {:body response-spec}}
+              :handler (fn [_])}}]
+
+    ["/push-data-to-db"
+     {:get {:summary "Bypass the automated system and check if new predictions are available."
+            :handler (fn [_]
+                       (db/insert-predictions-for-today)
+                       {:status 200})}}]]
 
    ["/graphql" {:no-doc true
                  :post (fn [req] (ok (graphql/execute-request (-> req :body slurp))))}]])

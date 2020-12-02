@@ -39,28 +39,41 @@
      :m04 {:ma 0 :mi Integer/MAX_VALUE}}
     total))
 
+(defn combine-min-max [{:keys [m01 m02 m03 m04] :as mima}]
+  (merge mima
+         {:ma (max (:ma m01) (:ma m02) (:ma m03) (:ma m04))
+          :mi (min (:mi m01) (:mi m02) (:mi m03) (:mi m04))}))
+
 (defn get-min-max []
-  (calculate-min-max (get-all-predictions)))
+  (combine-min-max (calculate-min-max (get-all-predictions))))
+
+(defn check-combined-result [all]
+  (every? #(= 30 (-> % vals)) all))
 
 (defn insert-predictions-for-today
   "Manages storage of new data."
   []
-  (log/info "Have we already saved?")
-  (when (get-by-saved-on {:day (t/today)})
+  (try
+   (log/info "Have we already saved?")
+   (if-let [today's-values (get-by-saved-on {:day (t/today)})]
+     (log/info today's-values)
+     (do
+      (log/info "Checking if new models are available.")
+      (when (models/check-if-models-complete)
 
-   (log/info "Checking if new models are available.")
-   (when (models/check-if-models-complete)
+        (log/info "Attempt to parse and save new models.")
+        (let [today (t/today)
+              {:keys [corona-pred covid-19-pred delphi yyg] :as all}
+              (models/combined-result (t/today))]
 
-     (log/info "Attempt to parse and save new models.")
-     (let [today (t/today)
-           {:keys [corona-pred covid-19-pred delphi yyg] :as all}
-           (models/combined-result (t/today))]
-
-       (insert-day! {:day today
-                     :M01 (-> corona-pred vals vec)
-                     :M02 (-> covid-19-pred vals vec)
-                     :M03 (-> delphi vals vec)
-                     :M04 (-> yyg vals vec)})))))
+          (when (check-combined-result all)
+           (insert-day! {:day today
+                         :m01 (-> corona-pred vals vec)
+                         :m02 (-> covid-19-pred vals vec)
+                         :m03 (-> delphi vals vec)
+                         :m04 (-> yyg vals vec)}))))))
+   (catch Exception e
+     (log/error e))))
 
 
 (defn set-interval [callback ms]

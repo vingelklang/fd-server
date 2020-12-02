@@ -7,8 +7,8 @@
                  [cheshire "5.10.0"]
                  [clojure.java-time "0.3.2"]
                  [tick "0.4.27-alpha"]
-                 [com.fasterxml.jackson.core/jackson-core "2.11.3"]
-                 [com.fasterxml.jackson.core/jackson-databind "2.11.3"]
+                 [com.fasterxml.jackson.core/jackson-core "2.12.0"]
+                 [com.fasterxml.jackson.core/jackson-databind "2.12.0"]
                  [com.walmartlabs/lacinia "0.37.0"]
                  [conman "0.9.0"]
                  [cprop "0.1.17"]
@@ -41,7 +41,7 @@
                  [selmer "1.12.31"]
 
                  ;; Glue:
-                 [tupelo "20.11.18a"]
+                 [tupelo/tupelo "20.11.29a"]
                  [clj-commons/fs "1.5.2"]
                  [clj-commons/conch "0.9.2"]]
 
