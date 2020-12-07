@@ -48,7 +48,7 @@
   (combine-min-max (calculate-min-max (get-all-predictions))))
 
 (defn check-combined-result [all]
-  (every? #(= 30 (-> % vals)) all))
+  (every? #(= 30 (-> % count)) (vals all)))
 
 (defn insert-predictions-for-today
   "Manages storage of new data."
@@ -66,14 +66,41 @@
               {:keys [corona-pred covid-19-pred delphi yyg] :as all}
               (models/combined-result (t/today))]
 
-          (when (check-combined-result all)
-           (insert-day! {:day today
-                         :m01 (-> corona-pred vals vec)
-                         :m02 (-> covid-19-pred vals vec)
-                         :m03 (-> delphi vals vec)
-                         :m04 (-> yyg vals vec)}))))))
+          (if-not (check-combined-result all)
+            (log/error "Combined result failed check.")
+            (insert-day! {:day today
+                          :m01 (-> corona-pred vals vec)
+                          :m02 (-> covid-19-pred vals vec)
+                          :m03 (-> delphi vals vec)
+                          :m04 (-> yyg vals vec)}))))))
    (catch Exception e
      (log/error e))))
+
+(defn force-push
+  "Manages storage of new data."
+  []
+  (try
+    (log/info "Force Push")
+    (if-let [today's-values (get-by-saved-on {:day (t/today)})]
+      (do
+        (log/info "Checking if new models are available.")
+        (when (models/check-if-models-complete)
+
+          (log/info "Attempt to parse and save new models.")
+          (let [today (t/today)
+                {:keys [corona-pred covid-19-pred delphi yyg] :as all}
+                (models/combined-result (t/today))]
+
+            (if-not (check-combined-result all)
+              (log/error "Combined result failed check.")
+              (update-day! {:day today
+                            :m01 (-> corona-pred vals vec)
+                            :m02 (-> covid-19-pred vals vec)
+                            :m03 (-> delphi vals vec)
+                            :m04 (-> yyg vals vec)})))))
+      (log/info "We haven't saved yet today, hmmm."))
+    (catch Exception e
+      (log/error e))))
 
 
 (defn set-interval [callback ms]

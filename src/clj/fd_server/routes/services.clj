@@ -125,7 +125,8 @@
             ;;:responses {200 {:body response-spec}}
             :parameters {:query {:n integer?}}
             :handler (fn [{{{:keys [n]} :query} :parameters}]
-                       {:status 200 :body (take n (db/get-all-predictions))})}}]]
+                       {:status 200
+                        :body (take n (db/get-all-predictions))})}}]]
 
    ["/debug" {:swagger {:tags ["Debug"]}}
 
@@ -133,15 +134,29 @@
      {:get {:summary "Check the status of the model folders."
             ;;:responses {200 {:body response-spec}}
             :handler (fn [_]
-                       {:status 200 :body (models/check-folders)})}}]
+                       {:status 200
+                        :body (models/check-folders)})}}]
 
+    ["/combined-result"
+     {:get {:summary "Return the combined result from folders."
+            ;;:responses {200 {:body response-spec}}
+            :handler (fn [_]
+                       {:status 200
+                        :body (models/combined-result
+                                (t/today))})}}]
     #_["/check-folders"
        {:get {:summary "Check the status of the model folders."
               ;;:responses {200 {:body response-spec}}
               :handler (fn [_])}}]
 
+    ["/force-push"
+     {:get {:summary "*Overwrite* the values for today from storage."
+            :handler (fn [_]
+                       (db/force-push)
+                       {:status 200})}}]
+
     ["/push-data-to-db"
-     {:get {:summary "Bypass the automated system and check if new predictions are available."
+     {:get {:summary "*Does not overwrite.* Bypass the automated system and check if new predictions are available."
             :handler (fn [_]
                        (db/insert-predictions-for-today)
                        {:status 200})}}]]
