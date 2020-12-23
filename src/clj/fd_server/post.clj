@@ -1,6 +1,7 @@
 (ns fd-server.post
   (:require
     [postal.core :as postal]
+    [clojure.tools.logging :as log]
     [fd-server.config :refer [env]]))
 
 (defonce emailed? (atom false))
