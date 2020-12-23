@@ -4,13 +4,14 @@
   :url "http://example.com/FIXME"
 
   :dependencies [[ch.qos.logback/logback-classic "1.2.3"]
+                 [com.draines/postal "2.0.4"]
                  [cheshire/cheshire "5.10.0"]
                  [clojure.java-time "0.3.2"]
                  [tick/tick "0.4.27-alpha"]
                  [com.fasterxml.jackson.core/jackson-core "2.12.0"]
                  [com.fasterxml.jackson.core/jackson-databind "2.12.0"]
                  [com.walmartlabs/lacinia "0.37.0"]
-                 [conman/conman "0.9.0"]
+                 [conman/conman "0.9.1"]
                  [cprop/cprop "0.1.17"]
                  [expound/expound "0.8.7"]
                  [funcool/struct "1.4.0"]
@@ -41,7 +42,7 @@
                  [selmer/selmer "1.12.31"]
 
                  ;; Glue:
-                 [tupelo/tupelo "20.12.03"]
+                 [tupelo/tupelo "20.12.16"]
                  [clj-commons/fs "1.5.2"]
                  [clj-commons/conch "0.9.2"]]
 
@@ -71,7 +72,7 @@
                                  [ring/ring-devel "1.8.2"]
                                  [ring/ring-mock "0.4.0"]]
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.24.1"]
-                                 [jonase/eastwood "0.3.11"]]
+                                 [jonase/eastwood "0.3.12"]]
 
                   :source-paths ["env/dev/clj"]
                   :resource-paths ["env/dev/resources"]
