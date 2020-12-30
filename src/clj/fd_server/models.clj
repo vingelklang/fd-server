@@ -33,7 +33,7 @@
 
 (defn file-check [day t model-directory]
   (case t
-     :delphi (double-check day (fs/find-files model-directory #"Global_.*"))
+     :delphi (double-check day (fs/find-files model-directory #"Global_V4_2.*"))
      :covid-19-pred (double-check day (fs/find-files model-directory #"covid-19-pred.txt"))
      :corona-pred (double-check day (fs/find-files model-directory #"corona_pred.txt"))
      :yyg (double-check day (fs/find-files model-directory #"yyg-output.txt"))
@@ -58,11 +58,13 @@
   (let [model-directory (str (fs/parent fs/*cwd*) path)]
     (file-check day t model-directory)))
 
-(defn check-if-models-complete []
+(defn check-models []
   (let [today (t/today)
         results (filter (partial check-if-folder-has-file-for today) output-folders)]
-    ;;TODO: Dehardcode number of models.
-    (= 4 (count results))))
+    results))
+
+(defn check-if-models-complete []
+  (= 4 (count (check-models))))
 
 (defn file-data-format [file]
   (when (fs/exists? file)
@@ -73,7 +75,7 @@
   (let [model-directory (str (fs/parent fs/*cwd*) path)]
     {:file-check (file-check day t model-directory)
      :target-files (case t
-                     :delphi (map file-data-format (fs/find-files model-directory #"Global_.*"))
+                     :delphi (map file-data-format (fs/find-files model-directory #"Global_V4_2.*"))
                      :covid-19-pred (map file-data-format (fs/find-files model-directory #"covid-19-pred.txt"))
                      :corona-pred (map file-data-format (fs/find-files model-directory #"corona_pred.txt"))
                      :yyg (map file-data-format (fs/find-files model-directory #"yyg-output.txt"))

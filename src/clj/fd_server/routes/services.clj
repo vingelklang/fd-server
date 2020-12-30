@@ -14,6 +14,7 @@
     [fd-server.middleware.exception :as exception]
     [fd-server.models :as models]
     [fd-server.db.core :as db]
+    [fd-server.post :as post]
     [ring.util.http-response :refer :all]
     [tick.alpha.api :as t]
     [clojure.tools.logging :as log]))
@@ -137,6 +138,13 @@
                        {:status 200
                         :body (models/check-folders)})}}]
 
+    ["/check-models"
+     {:get {:summary "Check the status of the models."
+            ;;:responses {200 {:body response-spec}}
+            :handler (fn [_]
+                       {:status 200
+                        :body (models/check-models)})}}]
+
     ["/combined-result"
      {:get {:summary "Return the combined result from folders."
             ;;:responses {200 {:body response-spec}}
@@ -153,6 +161,12 @@
      {:get {:summary "*Overwrite* the values for today from storage."
             :handler (fn [_]
                        (db/force-push)
+                       {:status 200})}}]
+
+    ["/test-mail"
+     {:get {:summary "*test* email."
+            :handler (fn [_]
+                       (post/test-email)
                        {:status 200})}}]
 
     ["/push-data-to-db"

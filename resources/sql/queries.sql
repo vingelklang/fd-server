@@ -2,7 +2,9 @@
 -- :doc adds the predictions for this day
 INSERT INTO predictions
 (day, m01, m02, m03, m04)
-VALUES (:day, :m01, :m02, :m03, :m04);
+VALUES (:day, :m01, :m02, :m03, :m04)
+on conflict (day) do update
+    set m01 = :m01, m02 = :m02, m03 = :m03, m04 = :m04;
 
 -- :name update-day! :! :n
 -- :doc updates predictions for this day

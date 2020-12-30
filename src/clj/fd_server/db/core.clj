@@ -65,7 +65,7 @@
           (get-latest)]
       (log/info all)
       (log/info latest)
-      (update-day! {:day today
+      (insert-day! {:day today
                     :m01 (if corona-pred
                            (-> corona-pred vals vec) m01)
                     :m02 (if covid-19-pred
@@ -77,6 +77,8 @@
     (catch Exception e
       (log/error e))))
 
+(defonce first-run (atom true))
+
 (defn insert-predictions-for-today
   "Manages storage of new data."
   []
@@ -87,9 +89,13 @@
      (log/info "Have we already saved?")
      (if-let [today's-values (get-by-saved-on {:day today})]
        ;; If we've already done this:
-       (log/info today's-values)
+       (when (< hours-from-midnight 1)
+        (log/info today's-values))
        ;; Total error check:
-       (if (> hours-from-midnight 3)
+       (if (and
+             ;; If the server has been restarted, give it a chance to grab the data first.
+             (not @first-run)
+             (>= hours-from-midnight 3))
          ;; Stop trying to get new valies. Kill the checker.
          (do
            (log/error "Stopping and sending email.")
@@ -99,6 +105,7 @@
          ;; Proceed to keep checking:
          (do
           (log/info "Checking if new models are available.")
+          (log/info (models/check-models))
           (when (models/check-if-models-complete)
 
             (log/info "Attempt to parse and save new models.")
@@ -113,7 +120,10 @@
                               :m03 (-> delphi vals vec)
                               :m04 (-> yyg vals vec)})))))))
      (catch Exception e
-       (log/error e)))))
+       (log/error e)))
+    (when (deref first-run)
+      (log/info "No longer first run.")
+      (reset! first-run false))))
 
 (defn set-interval [callback ms]
   (future (while true (do (Thread/sleep ms) (callback)))))
